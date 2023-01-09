@@ -73,6 +73,7 @@ const Hero = () => {
             <div className="absolute w-full display md:space-x-10 bottom-20 left-50 hidden md:flex">
               <a
                 target="_blank"
+                rel="noreferrer"
                 href="https://www.just-eat.co.uk/restaurants-olympus-fish-restaurant-finchley-central/menu"
                 className="hover:before:w-0"
               >
@@ -89,6 +90,7 @@ const Hero = () => {
 
               <a
                 target="_blank"
+                rel="noreferrer"
                 href="https://deliveroo.co.uk/menu/london/finchley-central/olympus-fish-and-chips"
                 className="hover:before:w-0"
               >
@@ -104,6 +106,7 @@ const Hero = () => {
 
               <a
                 target="_blank"
+                rel="noreferrer"
                 href="https://www.ubereats.com/gb/store/olympus-fish-%26-chips-restaurant/x2xexq7MQga5RjbmH35fUw"
                 className="hover:before:w-0"
               >
