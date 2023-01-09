@@ -1,0 +1,281 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities; 
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+
+:root {
+  --panel-width: calc(100% / 6);
+  --darkblue: #02020c;
+  --white: #fff;
+  --lightgray: #fafafb;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  color: #fff;
+  @apply tracking-wide
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--white);
+  overflow-x: hidden;
+  @apply bg-teal-700;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  font-size: 1vw;
+}
+
+a {
+  position: relative;
+  content: '';
+}
+
+a:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 0;
+  height: 1px;
+  background-color: #fff;
+  transition: all ease 0.5s;
+}
+
+.address-link:before {
+  bottom: -px;
+}
+
+a:hover:before {
+  width: 100%;
+}
+
+.content .text {
+  width: 100%;
+}
+
+.content .img_group {
+  position: absolute;
+  top: 15%;
+  left: 0;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 100px;
+  z-index: -1;
+}
+
+.content .img_group img {
+  opacity: 1;
+}
+
+h1 {
+  font-size: 2vw;
+  font-weight: 400;
+  line-height: 126px;
+  text-align: left;
+}
+
+// h1 .full-stack-dev {
+//   position: relative;
+// }
+
+.middle {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.loader-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: "all 0.25s ease-in-out";
+  background-color: #000000;
+  color: #dbd8d6;
+  h1 {
+    text-transform: uppercase;
+    font-family: 'Monsterrat', sans-serif;
+  }
+  h2 {
+    text-transform: uppercase;
+    font-family: "Bodoni Moda", serif;
+    font-style: italic;
+  }
+}
+
+// animation for the preloader
+.panels {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  width: 180vw;
+  height: 100%;
+  transform: translateX(-50%) skewX(-35deg);
+  clip-path: circle(100%);
+  z-index: 1;
+  background: var(--lightgray);
+}
+
+.panels .panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: var(--panel-width);
+  transform: scaleY(0);
+  transform-origin: top;
+  background: var(--darkblue);
+}
+
+.panels .panel:nth-child(even) {
+  transform-origin: bottom;
+}
+
+.panels .panel:nth-child(2) {
+  left: calc(var(--panel-width) - 1px);
+}
+
+.panels .panel:nth-child(3) {
+  left: calc(calc(var(--panel-width) * 2) - 2px);
+}
+
+.panels .panel:nth-child(4) {
+  left: calc(calc(var(--panel-width) * 3) - 4px);
+}
+
+.panels .panel:nth-child(5) {
+  left: calc(calc(var(--panel-width) * 4) - 5px);
+}
+
+.panels .panel:nth-child(6) {
+  left: calc(calc(var(--panel-width) * 5) - 6px);
+}
+
+.page-main {
+  display: flex;
+  height: 100%;
+  padding: 170px 15px;
+  clip-path: circle(20%);
+  overflow-y: auto;
+  background: var(--darkblue);
+}
+
+.page-main > div {
+  text-align: center;
+  margin: auto;
+}
+
+@media (max-width: 1024px) {
+  .panels {
+      width: 200vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .panels {
+      width: 235vw;
+  }
+}
+
+.custom-img {
+  background-image: url('/assets/onur_grad.jpg');
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+}
+
+.image-wrapper{
+  position: absolute;
+}
+
+.blur {
+  width: 250px;
+  background-color: #030000;
+  position: absolute;
+  bottom: -180px;
+  filter: blur(50px);
+  z-index: 999;
+}
+
+button {
+  @apply px-8 py-2 border shadow overflow-hidden hover:bg-blue-black hover:border-blue-black duration-500
+}
+
+.lines {
+  display: flex;
+  flex-direction: row;
+}
+.lines:before, .lines:after {
+  content: "";
+  flex: 1 1;
+  border-bottom: 1px solid;
+  margin: auto;
+}
+
+.lines:before {
+  margin-right: 10px;
+}
+
+.lines:after {
+  margin-left: 10px;
+}
+
+.menu {
+  background: inherit;
+}
+
+.menu {
+  content: '';
+  border-bottom: 2px dotted #ddd;
+}
+
+.fade-in-section {
+  opacity: 0;
+  transition: opacity 0.6s ease-out, transform 1.2s ease-out;
+  will-change: opacity, visibility;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}

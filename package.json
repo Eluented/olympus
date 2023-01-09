@@ -1,0 +1,32 @@
+{
+  "name": "onur_portfolio-next.js",
+  "description": "Onur's Portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/material": "^5.11.2",
+    "next": "12.2.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.7.1",
+    "react-in-viewport": "^1.0.0-alpha.28",
+    "react-intersection-observer": "^9.4.1",
+    "react-parallax": "^3.5.1",
+    "sass": "^1.54.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.7",
+    "eslint": "8.20.0",
+    "eslint-config-next": "^13.1.1",
+    "postcss": "^8.4.14",
+    "tailwindcss": "^3.1.6"
+  }
+}
