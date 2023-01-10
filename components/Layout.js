@@ -1,6 +1,5 @@
 import React from 'react'
-import Link from 'next/link'
-import Navbar from '/components/navbar'
+import Navbar from '/Navbar'
 import Footer from './Footer'
 import Head from 'next/head'
 
