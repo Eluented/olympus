@@ -49,6 +49,7 @@ const Hero = () => {
           objectFit: "cover",
           backgroundSize: "cover",
         }}
+        alt="background image of our fish and chips"
       >
         <div className="hero flex justify-center items-center h-screen ">
           {/* OVERLAY */}
@@ -197,7 +198,7 @@ const Hero = () => {
               </div>
             </div>
             <img
-              alt=""
+              alt="picture of restaurant, customers eating our declious fish and chips"
               className="object-cover w-full h-full group-hover:scale-110 transition duration-500 ease-in-out"
               src="/restaurant-sitting-area.png"
             />
@@ -218,7 +219,7 @@ const Hero = () => {
               </div>
             </div>
             <img
-              alt=""
+              alt="picture of cod and chips served in the restaurant"
               className="object-cover w-full h-full group-hover:scale-110 transition duration-500 ease-in-out"
               src="/cod3.jpg"
             />
@@ -240,7 +241,7 @@ const Hero = () => {
             <p className="ml-1 text-l mt-5">
               We strive to be a community hub where people can come together to
               enjoy a delicious meal in a warm and inviting atmosphere, and we
-              are committed to exceeding our customers' expectations at every
+              are committed to exceeding our customers&apos; expectations at every
               opportunity.
             </p>
           </div>

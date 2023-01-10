@@ -10,22 +10,12 @@ import Hero from "../components/Hero";
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>Olympus Fish and Chips</title>
-        <meta name="description" content="Fish and Chips Restaurant Finchley Ballards Lane" />
-        <meta name="keywords" content="Fish and Chips Turkish Restaurant Take Away Grilled Fish Fried Fish" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <Layout title="Homepage">
-          <Hero />
-          </Layout>
+      <Layout
+        description="Experience the best Fish and Chips in Finchley Central at Olympus. We only use the freshest, highest quality fish and cook it to perfection in our signature batter. In addition to our delicious fish and chips, we also offer a variety of sides to round out your meal. Come visit us and savor the taste of our freshly made Fish and Chips!"
+        keywords="Fish and Chips Turkish Restaurant take away takeaway takeout Grilled Fish Fried Fish Finchley Ballards Lane Cod Haddock Plaice"
+      >
+        <Hero />
+      </Layout>
     </>
   );
-}
-{
-  /* <div className='img_group'>
-  <div className='img_group_inner'>
-    <Image src='/assets/onur.png' alt='Onur Belek' width={200} height={400} />
-  </div>
-</div> */
 }

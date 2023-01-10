@@ -1,36 +1,49 @@
-import React, { useEffect } from 'react'
-import { useRouter } from 'next/router'
-import Link from 'next/link'
-import Head from 'next/head'
-import Layout from '../components/Layout'
+import React, { useEffect } from "react";
+import { useRouter } from "next/router";
+import Link from "next/link";
+import Head from "next/head";
+import Layout from "../components/Layout";
+import { Parallax } from "react-parallax";
 
 const NotFound = (title) => {
-    const router = useRouter()
+  const router = useRouter();
 
-    useEffect(() => {
-        setTimeout(() => {
-            // router.go(-1)
-            router.push('/');
-        }, 5000)
-    }, [])
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     router.push("/");
+  //   }, 4000);
+  // }, []);
 
-    return (
-     <>
-        <Head>
-            <title>{title? title + ' - Olympus': 'Olympus'}</title>
-            <meta name="description" content="Fish and Chips Restaurant Finchley Ballards Lane" />
-            <meta name="keywords" content="Fish and Chips Turkish Restaurant Take Away Grilled Fish Fried Fish" />
-            <link rel="icon" href="/favicon.ico" />
-        </Head>
-        <Layout title="Not Found">
-            <div className="flex justify-center items-center h-screen">
-                <h1>Oops...</h1>
-                <h2>This page cannot be found Please go back to the <Link href="/" className='font-bold text-base'>HomePage</Link></h2>
+  return (
+    <>
+      <Layout title="Page Not Found |">
+        <Parallax
+          bgImage="/fishBackground2.jpeg"
+          strength={400}
+          bgImageStyle={{
+            backgroundPosition: "center",
+            objectFit: "cover",
+            backgroundSize: "cover",
+          }}
+          alt="background image of our fish and chips"
+        >
+          <div className="hero flex justify-center items-center h-screen bg-black/40">
+            <div className="md:px-4 md:py-8 bg-black/50 px-2 py-4 rounded-xl">
+              <h1 className="md:text-7xl text-4xl text-center">Page Not Found</h1>
+              <p className="md:text-2xl mt-2 text-center">
+                This page cannot be found, you are being redirected to the
+                &nbsp;
+                <Link href="/" className="">
+                  home page
+                </Link>
+                &nbsp; in 4 seconds
+              </p>
             </div>
-            </Layout>
-        </>
+          </div>
+        </Parallax>
+      </Layout>
+    </>
+  );
+};
 
-    )
-}
-
-export default NotFound
+export default NotFound;

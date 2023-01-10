@@ -3,7 +3,11 @@ import Layout from "../components/Layout";
 
 export default function contactUs() {
   return (
-    <Layout> 
+    <Layout
+    title="Contact Us |"
+    description="Book a table or make an order for collection by calling us on 020 8371 8666"
+    keywords="Olympus Fish and chips contact number telephone number details Fish and Chips Turkish Restaurant take away takeaway takeout Grilled Fish Fried Fish Finchley Ballards Lane"
+    > 
         <div className="grid grid-cols-1 md:grid-cols-5 w-screen h-screen ">
           <div className="flex w-full h-full bg-fixed bg-center bg-cover relative col-span-3">
             <div className="map-container w-full ">
@@ -32,7 +36,7 @@ export default function contactUs() {
                   </div>
                   <div className="grow ml-6">
                     <p className="font-bold mb-1">
-                      <a href="https://goo.gl/maps/MCAgCT3VDrQjZKyv9" className="address-link">
+                      <a href="https://goo.gl/maps/MCAgCT3VDrQjZKyv9" className="address-link before:-bottom-1">
                         Address
                       </a>
                     </p>
@@ -54,8 +58,8 @@ export default function contactUs() {
                     </div>
                   </div>
                   <div className="grow ml-6">
-                    <p className="font-bold mb-1">Reservations</p>
-                    <p className="text-gray-400"> +44 (0) 20 8371 8666</p>
+                    <p className="font-bold mb-1">Reservations/Takeaway Collection</p>
+                    <p className="text-gray-400"> 020 8371 8666</p>
                   </div>
                 </div>
               </div>
