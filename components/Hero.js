@@ -1,9 +1,7 @@
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
-import Fade from "react-reveal/Fade";
 import { Parallax } from "react-parallax";
 import { useRouter } from "next/router";
-import Link from "next/link";
 
 const Hero = () => {
   const router = useRouter();

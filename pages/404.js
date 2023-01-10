@@ -1,18 +1,17 @@
 import React, { useEffect } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import Head from "next/head";
 import Layout from "../components/Layout";
 import { Parallax } from "react-parallax";
 
-const NotFound = (title) => {
+const NotFound = () => {
   const router = useRouter();
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     router.push("/");
-  //   }, 4000);
-  // }, []);
+  useEffect(() => {
+    setTimeout(() => {
+      router.push("/");
+    }, 4000);
+  }, []);
 
   return (
     <>

@@ -1,9 +1,4 @@
-import Head from "next/head";
-import Baffle from "baffle-react";
-import baffle from "baffle";
-import React, { useEffect, useState, useRef } from "react";
-import Image from "next/image";
-import { gsap } from "gsap";
+import React from "react";
 import Layout from "../components/Layout";
 import Hero from "../components/Hero";
 
