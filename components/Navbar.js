@@ -6,23 +6,6 @@ function Navbar() {
   // hamburger menu
   const [nav, setNav] = useState(false);
 
-  // color changes when scrolled
-  const [textColor, setTextColor] = useState("white");
-
-  // useEffect(() => {
-  //   // when you scroll background and text color changes
-  //   const changeColor = () => {
-  //     if (window.scrollY >= 90) {
-  //       setColor('#fffff')
-  //       setTextColor('#00000')
-  //     } else {
-  //       setColor('transparent')
-  //       setTextColor('#fffff')
-  //     }
-  //   }
-  //   // each time user scrolls it runs function
-  //   window.addEventListener('scroll', changeColor)
-  // })
 
   const handleNav = () => {
     setNav(!nav);
@@ -36,7 +19,6 @@ function Navbar() {
         <ul>
           <li>
             <h1
-              style={{ color: `${textColor}` }}
               className="text-3xl font-bold"
             >
               <Link href="/">
@@ -45,7 +27,7 @@ function Navbar() {
             </h1>
           </li>
         </ul>
-        <ul style={{ color: `${textColor}` }} className="hidden sm:flex">
+        <ul className="hidden sm:flex">
           <li className="p-4 text-xl">
             <Link href="/menu">
               <a>Menu</a>
@@ -68,9 +50,9 @@ function Navbar() {
         {/* Mobile Button */}
         <div onClick={handleNav} className="block sm:hidden z-10">
           {nav ? (
-            <AiOutlineClose size={20} style={{ color: `${textColor}` }} />
+            <AiOutlineClose size={20} style={{ color: `white` }} />
           ) : (
-            <AiOutlineMenu size={20} style={{ color: `${textColor}` }} />
+            <AiOutlineMenu size={20} style={{ color: `white` }} />
           )}
         </div>
 
@@ -78,11 +60,11 @@ function Navbar() {
         <div
           className={
             nav
-              ? "sm:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300"
+              ? "sm:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300 flex-col" 
               : "sm:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300"
           }
         >
-          <ul>
+          <ul className="flex flex-col">
             <li
               onClick={handleNav}
               className="p-4 text-4xl hover:text-gray-500"
